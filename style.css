@@ -1,0 +1,112 @@
+/*? Indian Flag CSS  */
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+
+
+.flag{
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: grey;
+}
+
+.allParts{
+    width: 40vw;
+    height: 15vh;
+    border-radius: 5px;
+}
+
+.top{
+    background-color: orange;
+}
+.middle{
+    background-color: white;
+    display: flex;
+    justify-content: center;
+}
+.wheel{
+    width: 108px;
+    height: 108px;
+    outline: 1px solid darkblue;
+    border-radius: 50%;
+    text-align: center;
+
+    animation-name: wheelAnimation;
+    animation-iteration-count: infinite;
+    animation-duration: 0.1s;
+}
+
+.line{
+    height: 108px;
+    background-color: darkblue;
+    position: absolute;
+    width: 1px;
+    left: 50%;
+}
+.line:nth-child(1){
+    transform: rotate(15deg);
+}
+.line:nth-child(2){
+    transform: rotate(30deg);
+}
+.line:nth-child(3){
+    transform: rotate(45deg);
+}
+.line:nth-child(4){
+    transform: rotate(60deg);
+}
+.line:nth-child(5){
+    transform: rotate(75deg);
+}
+.line:nth-child(6){
+    transform: rotate(90deg);
+}
+.line:nth-child(7){
+    transform: rotate(105deg);
+}
+.line:nth-child(8){
+    transform: rotate(120deg);
+}
+.line:nth-child(9){
+    transform: rotate(135deg);
+}
+.line:nth-child(10){
+    transform: rotate(150deg);
+}
+.line:nth-child(11){
+    transform: rotate(165deg);
+}
+.line:nth-child(12){
+    transform: rotate(180deg);
+}
+
+.bottom{
+    background-color: green;
+}
+
+
+
+/*? Wheel Animation */
+@keyframes wheelAnimation {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+
+/*? Media */
+@media only screen and (max-width:768px){
+    .allParts{
+        width: 60vw;
+        height: 19vh;
+    }
+}
